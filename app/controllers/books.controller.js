@@ -81,7 +81,7 @@ exports.update = (req, res) => {
         });
 }
 
-// Eliminar un libro por Id
+
 exports.delete = (req, res) => {
     let id = req.params.id;
     Book.destroy({ where: { id: id } })
