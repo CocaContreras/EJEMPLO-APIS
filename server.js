@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
 });
 
 // Sincronizar la base de datos
-db.sequelize.sync({ force: false }).then(() => { // Cambié force: true a force: false para evitar la eliminación de datos existentes
+db.sequelize.sync({ force: true }).then(() => { // Cambié force: true a force: false para evitar la eliminación de datos existentes
   console.log('Base de datos sincronizada.');
 }).catch(err => {
   console.error('Error al sincronizar la base de datos:', err);
